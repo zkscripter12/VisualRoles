@@ -1,11 +1,36 @@
 
-export default plugin({
-    start() {
-        console.log('[VisualRoles] Plugin iniciado!')
+import { Design } from '@revenge-mod/discord/design'
 
+interface VisualRolesSettings {
+    enabled: boolean
+}
+
+export default plugin<{ jsonStorage: VisualRolesSettings }>({
+    jsonStorage: {
+        load: true,
+        default: {
+            enabled: true,
+        },
     },
 
-    stop() {
-        console.log('[VisualRoles] Plugin encerrado!')
+    start({ logger }) {
+        logger.log('VisualRoles iniciado!')
+    },
+
+    SettingsComponent({ api }) {
+        const { TableRowGroup, TableSwitchRow } = Design
+        const settings = api.jsonStorage.use()
+
+        return (
+            <TableRowGroup>
+                <TableSwitchRow
+                    label="Ativar VisualRoles"
+                    value={settings?.enabled ?? true}
+                    onValueChange={(enabled: boolean) =>
+                        api.jsonStorage.set({ enabled })
+                    }
+                />
+            </TableRowGroup>
+        )
     },
 })
