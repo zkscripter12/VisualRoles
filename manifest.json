@@ -1,3 +1,4 @@
+
 {
   "name": "VisualRoles",
   "description": "Personalização visual local de cargos no Discord.",
@@ -9,6 +10,5 @@
   "main": "index.js",
   "vendetta": {
     "icon": "ic_image_slash"
-  },
-  "hash": "f7db02f61daa0461059eb069dae469a625e91182ea53cf532e8db140b711e581"
+  }
 }
