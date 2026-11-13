@@ -1,4 +1,3 @@
-
 import { Design } from '@revenge-mod/discord/design'
 
 interface VisualRolesSettings {
