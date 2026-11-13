@@ -4,6 +4,7 @@
 
   const React = components.React;
   const { View, Text } = components.ReactNative;
+
   const Forms =
     components.Forms ||
     metro.findByProps("FormSection", "FormRow", "FormSwitchRow") ||
@@ -69,10 +70,18 @@
       if (plugin.storage.enabled === undefined) {
         plugin.storage.enabled = true;
       }
+
       toasts.showToast("VisualRoles carregado!");
     },
     settings: Settings
   };
 
   Object.defineProperty(exports, "__esModule", { value: true });
-})({}, vendetta.plugin, vendetta.ui.toasts, vendetta.metro, vendetta.metro.common, vendetta.ui.components);
+})(
+  {},
+  vendetta.plugin,
+  vendetta.ui.toasts,
+  vendetta.metro,
+  vendetta.metro.common,
+  vendetta.ui.components
+);
