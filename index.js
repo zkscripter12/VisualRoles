@@ -1,4 +1,3 @@
-
 (function (exports, plugin, toasts, metro, common, components) {
   "use strict";
 
