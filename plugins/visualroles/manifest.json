@@ -1,0 +1,13 @@
+{
+  "format": 1,
+  "id": "com.zkscripter12.visualroles",
+  "name": "VisualRoles",
+  "description": "Personalizações visuais locais de cargos por membro (sem alterar cargos ou permissões reais).",
+  "author": "zkscripter12",
+  "version": "0.2.0",
+  "dependencies": {
+    "revenge.api": { "version": ">=1.2.1 <2" },
+    "discord": { "version": "*" }
+  },
+  "dist": { "script": "index.js" }
+}
